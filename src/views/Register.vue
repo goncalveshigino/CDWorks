@@ -35,7 +35,7 @@
               v-model="form.email"
               type="text"
               :state="error.email.state"
-              placeholder="Informe seu Email"
+              placeholder="Informe seu melhor Email"
             ></b-form-input>
             <b-form-invalid-feedback id="input-email-feedback">{{
               error.email.message
@@ -84,7 +84,7 @@
             variant="outline-info"
             size="sm"
             block
-            >Ja tem cadastro..?</b-button
+            >Já tem cadastro..?</b-button
           >
         </b-form>
       </div>
@@ -129,6 +129,7 @@ export default {
         password: null,
         passwordConfirmation: null
       };
+      this.errorReset()
     },
     errorReset() {
       this.error = {
@@ -164,7 +165,7 @@ export default {
             email: this.form.email,
             password: this.form.password
         })
-
+         this.$router.push('/login')
       } catch (error) {
          console.error(error)
          this.error.message = " Nao foi possivel concluir o cadastro"
