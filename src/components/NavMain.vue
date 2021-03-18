@@ -14,13 +14,13 @@
             <!-- Right aligned nav items -->
             <b-navbar-nav class="ml-auto">
                 <b-nav-item @click="$router.push('/register')">Cadastra-se</b-nav-item>
-                <b-nav-item @click="$router.push('/login')">Entrar</b-nav-item>
+                <b-nav-item @click="$router.push('/login')">Entrar</b-nav-item>        
                 <b-nav-item-dropdown right>
-                     <template v-slot:button-content>
-                        <em>NOME_USUARIO</em>
-                     </template>
-                     <b-drodown-item @click="$router.push('/profile/1')">Perfil</b-drodown-item>
-                     <b-drodown-item @click="logout()">Sair</b-drodown-item>
+                    <template #button-content>
+                        <em>Usuário</em>
+                    </template>
+                    <b-dropdown-item @click="$router.push('/profile/1')">Perfil</b-dropdown-item>
+                    <b-dropdown-item @click="logout()">Sair</b-dropdown-item>
                 </b-nav-item-dropdown>
             </b-navbar-nav>
           </b-collapse>
